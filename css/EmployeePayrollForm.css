@@ -162,4 +162,84 @@ select {
 .cancelButton {
   text-decoration: none;
   text-align:center;
+  text-emphasis-color: black;
+  
+}
+@media only screen and (max-width: 960px){
+  .cancelButton {
+      margin-left: 0px;
+  }
+  .form{
+      width: 85%;
+      padding: 44px 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form{
+      margin-top : 10px;
+  }
+  .row {
+      flex-direction: column;
+  }
+  .uploadButton {
+      justify-content: flex-start;
+  }
+  .profile-radio-button {
+      flex-flow:wrap;
+  }
+  .profile-radio-content{
+      flex-flow: wrap;
+  }
+  .submit-reset {
+      width: 100%;
+      display: flex;
+      flex-grow: 0;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  }
+  .submitButton{
+      margin:0;
+  }
+  .buttonParent {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+  }
+  .select-div{
+      display: block;
+      width: 100%;
+  }
+}
+.cancelButton{
+  background: rgb(156, 124, 124);
+  color:white;
+  border-color: black;
+  border-radius: 10px;
+}
+.cancelButton:hover{
+  background-color: rgb(92, 62, 62);
+}
+
+.submitButton{
+  background-color: rgb(106, 105, 119);
+  color: white;
+  border-color: black;
+  border-radius: 4px;
+}
+.submitButton:hover{
+  background-color: #3a345c;
+}
+.resetButton{
+  background-color: rgb(106, 105, 119);
+  color: white;
+  border-color: black;
+  border-radius: 4px;
+}
+.resetButton:hover{
+  background-color: #3a345c;
+}
+
+.button:hover {
+  box-shadow: 0 12px 5px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
