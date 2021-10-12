@@ -173,19 +173,22 @@ body {
     
   }
   
-  @media only screen and (max-width: 960px){
+  @media only screen and (max-width: 960px) {
     .cancelButton {
         margin-left: 0px;
     }
-    .form{
+    .form {
         width: 85%;
         padding: 44px 20px;
     }
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .form{
-        margin-top : 10px;
+    .profile-radio-content {
+        flex-flow: wrap;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .form {
+        margin-top: 10px;
     }
     .row {
         flex-direction: column;
@@ -193,61 +196,61 @@ body {
     .uploadButton {
         justify-content: flex-start;
     }
-    .profile-radio-button {
-        flex-flow:wrap;
-    }
-    .profile-radio-content{
+    .profile-radio-content {
         flex-flow: wrap;
     }
     .submit-reset {
         width: 100%;
         display: flex;
-        flex-grow: 0;
+        flex-grow: 1;
         flex-direction: row-reverse;
         justify-content: space-between;
         margin-bottom: 20px;
     }
-    .submitButton{
-        margin:0;
+    .submitButton {
+        margin: 0;
     }
     .buttonParent {
         flex-direction: column-reverse;
         align-items: flex-start;
     }
-    .select-div{
-        display: block;
-        width: 100%;
-    }
-  }
+}
   .cancelButton{
-    background: rgb(52, 21, 92);
+    background: rgb(233, 60, 60);
     color:white;
     border-color: black;
-    border-radius: 10px;
-  }
-  .cancelButton:hover{
-    background-color: rgb(92, 62, 62);
-  }
-  
-  .submitButton{
-    background-color: rgb(106, 105, 119);
+    border-radius: 4px;
+}
+.cancelButton:hover{
+    background-color: rgb(167, 12, 12);
+}
+
+.submitButton{
+    background-color: green;
     color: white;
     border-color: black;
     border-radius: 4px;
-  }
-  .submitButton:hover{
-    background-color: #3a345c;
-  }
-  .resetButton{
-    background-color: rgb(106, 105, 119);
+}
+.submitButton:hover{
+    background-color: #074e0a;
+}
+.resetButton{
+    background-color: rgb(64, 64, 243);
     color: white;
     border-color: black;
     border-radius: 4px;
+}
+.resetButton:hover{
+    background-color: rgb(14, 14, 104);
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
-  .resetButton:hover{
-    background-color: #3a345c;
-  }
-  
-  .button:hover {
-    box-shadow: 0 12px 5px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-  }
+
+error-output {
+    margin-left: 10px;
+    font-size : 12px;
+    font-style: italic;
+    color: red;
+}
