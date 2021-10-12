@@ -1,25 +1,60 @@
-var salaryOutput = document.querySelector(".salary-output");
-var salary = document.querySelector("#salary");
-salary.addEventListener("input", function () {
-  salaryOutput.textContent = salary.value;
-});
-
-function save(e) {
-  let name = document.getElementById("name").value;
-  let date = document.getElementById("day").value;
-  let month = document.getElementById("month").value;
-  let year = document.getElementById("year").value;
-  let startDate = Date.parse(year + "-" + month + "-" + date);
-
-  let nameRegex = RegExp("^[A-Z][a-z]{2,}$");
-  if (!nameRegex.test(name)) {
-    alert("Invalid name");
-    return false;
+class EmployeePayroll {
+  //getters and setters
+  get id() {
+    return this._id
+  }
+  set id(id)
+  {
+    this._id = id;
   }
 
-  let maxDateGap = 30 * 24 * 60 * 60 * 1000;
-  if (startDate - Date.now() > maxDateGap) {
-    alert("Invalid Date");
-    return false;
+  get name() {return this._name;
+  }
+  set name(name) {
+    let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$')
+    if (nameRegex.test(name))
+    this._name = name;
+    else throw 'Name is Incorrect'
+  }
+  get profilePic() { return this._profilePic;}
+  set profilePic(profilePic)
+  {
+    this._profilePic = profilePic;
+  }
+  get gender() {
+    return this._gender;
+  }
+  set gender(gender){
+    this._gender = gender;
+  }
+  get department() {return this._department}
+  set department(department)
+  {
+    this._department = department;
+  }
+  get salary() {return this._salary;}
+  set salary(salary) {
+    this._salary =salary;
+  }
+  get note() {return this._note;}
+  set note(note)
+  {
+    this._note = note;
+  }
+  get startDate() {return this.startDate;}
+  set startDate(startDate) {
+    if (startDate <= new Date()) {
+        this._startDate = startDate + 1;
+    } else {
+        throw "Invalid date";
+    }
+}
+  toString() {
+    const options = {year :'numeric', month:'long',day:'numeric'};
+    const empDate = !this.startDate ? "undefined":
+                    this.startDate.toLocaleDateString("en-US",options);
+    return "id=" +this.id+ ", name='" +this.name+ ", gender='" +this.gender+
+            ",profilePic='" +this.profilePic+ ",department=" +this.department+
+            ",salary=" +this.salary+ ",startDate=" +empDate+",note="+this.note;               
   }
 }
