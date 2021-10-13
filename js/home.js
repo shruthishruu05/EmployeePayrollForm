@@ -35,42 +35,6 @@ const createInnerHtml = () => {
     }
     document.querySelector('#display').innerHTML = innerHtml;
 }
-// const createEmployeePayrollJSON = () => {
-//     let employeeListLocal = [{
-//             _name: "Narayan",
-//             _gender: "Male",
-//             _department: ["Finance", "Sales"],
-//             _salary: "700000",
-//             _startDate: "26 Jan 2018",
-//             _note: "",
-//             _id: new Date().getTime(),
-//             _profilePic: "../assets/profile-images/Ellipse -5.png"
-//         },
-//         {
-//             _name: "Shruthi",
-//             _gender: "Female",
-//             _department: ["sales", "Engineering"],
-//             _salary: "750000",
-//             _startDate: "17 Dec 2018",
-//             _note: "",
-//             _id: new Date().getTime() + 1,
-//             _profilePic: "../assets/profile-images/Ellipse -7.png"
-//         },
-//         {
-//             _name: 'Amarpa Shashanka Keerthi Kumar',
-//             _gender: 'Female',
-//             _department: [
-//                 'Sales'
-//             ],
-//             _salary: 400800,
-//             _startDate: '29 Oct 2019',
-//             _note: '',
-//             id: new Date().getTime() + 1,
-//             _profilePic: "../assets/profile-images/Ellipse -1.png"
-//         }
-//     ];
-//     return employeeListLocal;
-// };
 
 const getDeptHtml = (departmentList) => {
     let deptHtml = "";
