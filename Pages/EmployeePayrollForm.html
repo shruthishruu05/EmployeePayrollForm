@@ -30,7 +30,7 @@
                     <label class ="label text" for="profile">Profile image</label>
                     <div class ="profile-radio-content">
                         <label>
-                            <input type="radio" id="profile1" name="profile" value="..assets/profile-images/Ellipse -1.png"required>
+                            <input type="radio" id="profile1" name="profile" value="../assets/profile-images/Ellipse -1.png"required>
                             <img class ="profile" id ="image1" src="../assets/profile-images/Ellipse -1.png">
                         </label>
                         <label>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="row-content">
                     <label class="label text" for="gender">Gender</label>
-                    <div>
+                    <div class="geneder-content">
                         <input type ="radio" id="male" name="gender" value="male">
                         <label class ="text" for="male">Male</label>
                         <input type="radio" id="female" name="gender" value="female">
@@ -137,12 +137,12 @@
                             
                         <error-output class="date-error" for="startdate"></error-output>
                     </div>
-                        <div class="row-content">
+                        <div class="row-content text-row">
                         <label class="label text" for="notes">Notes</label>
-                        <textarea id="notes" class="input" name="Notes" placeholder="" style="height:100px"></textarea>
+                        <textarea id="notes" class="input" name="Notes" placeholder="" style="height:100px; "></textarea>
                     </div>
                     <div class="buttonParent">
-                        <a href="#" class="button cancelButton">Cancel</a>
+                        <a href="../Pages/home.html" class="button cancelButton">Cancel</a>
                         <div class="submit-reset">
                             <button type="submit" class="button submitButton" id="submitButton" >Submit</button>
                             <button type="reset" class="button resetButton">Reset</button>
