@@ -1,4 +1,4 @@
-let siteProperties = {
-    homePage: "../Pages/home.html",
-    addEmpPayrollPage: "/..Pages/EmployeePayrollForm.html"
+let site_properties = {
+    home_page: "../Pages/home.html",
+    add_emp_payroll_page: "../Pages/EmployeePayrollForm.html"
 };
