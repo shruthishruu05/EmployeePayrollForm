@@ -85,16 +85,38 @@ const setSelectedValues = (propertyValue, value) => {
 const save = (event) => {
   event.preventDefault();
   event.stopPropagation();
-  try {
+  try{
     setEmployeePayrollObject();
-    createAndUpdateStorage();
-    resetForm();
-    window.location.replace(site_properties.home_page);
+    if(site_properties.use_local_storage.match("true")){
+      createAndUpdateStorage();
+      resetForm();
+      window.location.replace(site_properties.home_page);
+    }
+    else {
+      createOrUpdateEmployeePayroll();
+    }
   } catch (e) {
     console.error(e);
     return;
   }
-};
+}
+const createOrUpdateEmployeePayroll = () => {
+  let postUrl = site_properties.server_url;
+  let methodCall = "POST";
+  if(isUpdate) {
+    methodCall = "PUT";
+    postUrl = postUrl + employeePayrollObj.id.toString();
+  }
+  makeServiceCall(methodCall, postUrl, true, employeePayrollObj)
+      .then(responceText => {
+        resetForm();
+        window.location.replace(site_properties.home_page);
+      })
+      .catch(error => {
+        throw error;
+      });
+}
+
 const createNewEmployeeId = () => {
   let empID = localStorage.getItem("EmployeeId");
   empID = !empID ? 1 : (parseInt(empID)+1).toString();
